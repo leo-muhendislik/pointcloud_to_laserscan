@@ -4,6 +4,7 @@
 
     <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
         <remap from="cloud_in" to="cloud_without_target"/>
+        <remap from="scan" to="/mybot/laser/scan2"/>
 
         <param name="max_height" value="10.0"/>
         <param name="min_height" value="-10.0"/>
