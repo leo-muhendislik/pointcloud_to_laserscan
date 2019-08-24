@@ -7,16 +7,18 @@
         <remap from="scan" to="scan"/>
 
         <param name="max_height" value="0.1"/>
-        <param name="min_height" value="-0.05"/>
+        <param name="min_height" value="-0.1"/>
 
-        <param name="range_max" value="4.0" />
+        <param name="range_max" value="10.0" />
         <param name="range_min" value="0.15" />
+
+        <param name="angle_increment" value="π/360" />
 
     </node>
 
     <node pkg="tf"
           type="static_transform_publisher"
-          name="velodyne_to_base_link"
-          args="0 0 0 -1.57079632679 0 0 /velodyne /base_link  100"/>
+          name="base_link_to_velodyne"
+          args="0 0 0 0 0 0 /base_link /velodyne  10"/>
 
 </launch>
