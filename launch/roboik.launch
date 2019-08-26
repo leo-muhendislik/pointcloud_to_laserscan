@@ -19,6 +19,6 @@
     <node pkg="tf"
           type="static_transform_publisher"
           name="base_link_to_velodyne"
-          args="0 0 0 0 0 0 /base_link /velodyne  10"/>
+          args="0 0 0 0 0 0 /laser /velodyne  100"/>
 
 </launch>
